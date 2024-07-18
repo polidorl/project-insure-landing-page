@@ -1,0 +1,91 @@
+:root {
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    --font1: "DM Serif Display", serif;
+    --padding-container: 80px 0;
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    /* background-color: steelblue; */
+    overflow: hidden;
+    margin: 0 auto;
+    padding: var(--padding-container)
+}
+
+.hero {
+    background-color: var(--dark-violet);
+    color: #fff;
+    --padding-container:0;
+
+}
+
+.nav {
+    background-color: #fff;
+}
+
+.nav__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__links {
+    display: none;
+}
+
+.nav__icon,
+.nav__logo {
+    display: block;
+}
+.hero__main{
+    width: 100%;
+    }
+.hero__main::before{
+    content: "";
+    display: block;
+    height: 370px;
+    width: 100%;
+    background-image: url('../images/image-intro-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero__texts{
+    width:90%;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+.title{
+    font-size: 2.5rem;
+    font-family: var(--font1);
+    letter-spacing: 3px;
+}
+.paragraph{
+    line-height: 1.5;
+    margin-top: 1em;
+}
+.cta{
+    display: inline-block;
+    margin-top: 1.5em;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color:#fff;
+    padding: .8em 2.2em
+}
