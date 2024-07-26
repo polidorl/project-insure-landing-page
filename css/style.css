@@ -8,6 +8,8 @@
     --font1: "DM Serif Display", serif;
     --padding-container: 80px 0;
 
+    scroll-padding-top: 80px;
+
 }
 
 * {
@@ -22,11 +24,9 @@ body {
 .container {
     max-width: 1200px;
     width: 90%;
-
     overflow: hidden;
     margin: 0 auto;
-    padding: var(--padding-container);
-    margin: 0 auto;
+    padding: var(--padding-container);     
 }
 
 .hero {
@@ -47,8 +47,51 @@ body {
     justify-content: space-between;
 }
 
+.nav__links:target{
+    clip-path:circle(150% at top left);
+}
+
+.nav__links:target ~ .nav__hamburguer--last{
+    display: block;
+}
+
 .nav__links {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    top:80px;
+    bottom: 0;
+    right:0;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:3em;
+    background-color: #000;
+    gap: 3em;
+    clip-path: circle(0% at top left);
+    transition: .4s clip-path;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* padding: .8em 0; */
+}
+
+.nav__link--cta {
+    color: #fff;
+    border: 1px solid;
+    padding: .8em 2em;
+}
+
+.nav__hamburguer--last{
+    display:none;
+    position: absolute;
+    right:5%;
+    top:24px;
+    
 }
 
 .nav__icon,
@@ -69,6 +112,8 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+
 
 .hero__texts {
     width: 90%;
@@ -246,22 +291,35 @@ body {
 
 @media(min-width: 768px) {
 
-    .nav__links {
-        display: flex;
-        gap: 2em;
+    .nav__links:target{
+        /* clip-path:circle(150% at top left); */
+        clip-path: unset;
     }
-
+    
+    .nav__links:target ~ .nav__hamburguer--last{
+        /* display: block; para que no se muestre el icono de cerrar*/ 
+        display:none;
+    }
+    
+    .nav__links {
+        /* display: none; */
+        display: flex;
+        gap: 3em;
+        position: unset;
+        flex-direction: row;
+        padding-top:0;
+        background-color: #fff;
+        clip-path: unset;
+        transition: unset;
+    }
+  
     .nav__link {
-        text-decoration: none;
         color: var(--dark-grayish-violet);
-        text-transform: uppercase;
-        font-weight: 700;
         padding: .8em 0;
     }
 
     .nav__link--cta {
         color: var(--dark-violet);
-        border: 1px solid;
         padding: .8em 2em;
     }
 
@@ -331,10 +389,6 @@ body {
     .different__icon {
         margin-left: 0;
     }
-
-
-
-
 
     /* find */
 .find {

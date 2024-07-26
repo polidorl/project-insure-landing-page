@@ -20,20 +20,33 @@
 
 <body>
   <header class="hero">
+
     <nav class="nav">
+
       <div class="nav__container container">
         <figure class="nav__figure">
           <img src="./images/logo.svg" class="nav__logo" alt="logo">
         </figure>
-        <div class="nav__links">
+
+        <div class="nav__links" id="open">
           <a href="#" class="nav__link">How we work</a>
           <a href="#" class="nav__link">Blog</a>
           <a href="#" class="nav__link">Account</a>
           <a href="#" class="nav__link nav__link--cta">View plans</a>
         </div>
-        <figure class="nav__hamburguer">
+
+        <!-- <figure class="nav__hamburguer">
           <img src="./images/icon-hamburger.svg" class="nav__icon" alt="icon-hamburguer">
-        </figure>
+        </figure> -->
+        <a href="#open" class="nav__hamburguer">
+          <img src="./images/icon-hamburger.svg" class="nav__icon" alt="icon-hamburger">
+        </a>
+
+        <a href="#" class="nav__hamburguer nav__hamburguer--last">
+          <img src="./images/icon-close.svg" class="nav__icon" alt="icon-close">
+        </a>
+
+
       </div>
     </nav>
     <section class="hero__main container">

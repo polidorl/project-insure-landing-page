@@ -1,4 +1,4 @@
-# Project name: Insure landing page
+# Project name: Insure landing page Flexbox
 ## Table of contents
 
   - [Overview](#overview)
